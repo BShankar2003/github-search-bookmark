@@ -35,7 +35,8 @@ h1 {
 
 input[type="text"] {
   border: none;
-  width: 100%;
+  max-width: 500px;
+  width: 90vw;
   border-radius: 16px;
   background: #f0f4fc;
   padding: 18px 20px;
@@ -44,11 +45,16 @@ input[type="text"] {
   color: #1b254b;
   margin-bottom: 30px;
   transition: box-shadow .2s, border .18s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 input[type="text"]:focus {
   box-shadow: 0 0 0 4px #2563eb2f;
   border: 2px solid #14b8a6;
 }
+
 
 button {
   border: none;
@@ -127,3 +133,12 @@ article:hover {
   color: #14b8a6;
   transform: scale(1.15) rotate(-9deg);
 }
+
+@media (max-width: 600px) {
+  input[type="text"] {
+    max-width: 95vw;
+    font-size: 1rem;
+    padding: 14px 11px;
+  }
+}
+
