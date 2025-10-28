@@ -1,0 +1,129 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #dbeafe 0%, #f8fafc 40%, #e0fbfc 100%);
+  color: #1b254b;
+}
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  background: #ffffffed;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 54px 5vw 60px 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+h1 {
+  color: #2563eb;
+  font-size: 2.9rem;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  margin-bottom: 36px;
+  text-align: center;
+  background: linear-gradient(90deg,#2563eb 60%,#14b8a6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input[type="text"] {
+  border: none;
+  width: 100%;
+  border-radius: 16px;
+  background: #f0f4fc;
+  padding: 18px 20px;
+  box-shadow: 0 2px 12px rgba(37,99,235,.10);
+  font-size: 1.15rem;
+  color: #1b254b;
+  margin-bottom: 30px;
+  transition: box-shadow .2s, border .18s;
+}
+input[type="text"]:focus {
+  box-shadow: 0 0 0 4px #2563eb2f;
+  border: 2px solid #14b8a6;
+}
+
+button {
+  border: none;
+  border-radius: 2em;
+  background: linear-gradient(90deg,#2563eb 60%,#14b8a6 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.06em;
+  margin-right: 10px;
+  padding: 10px 35px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 22px 0 #60a5fa35;
+  outline: none;
+  cursor: pointer;
+  transition: background .16s, transform .12s;
+}
+button:active {
+  transform: scale(0.96);
+}
+button[aria-pressed="true"] {
+  background: #14b8a6;
+  color: #fff;
+}
+
+article {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f3f8ff;
+  border-radius: 20px;
+  box-shadow: 0 4px 32px 0 #3b82f633;
+  margin-top: 28px;
+  padding: 33px 30px 33px 23px;
+  display: flex;
+  align-items: flex-start;
+  gap: 26px;
+  border-left: 9px solid #14b8a6;
+  transition: box-shadow .15s, transform .12s;
+  animation: cardEnter .36s cubic-bezier(.4,1.8,.7,.8);
+}
+
+article:hover {
+  box-shadow: 0 16px 46px 0 #0ea5e964, 0 1.5px 16px 0 #2563eb22;
+  transform: scale(1.017) translateY(-4px);
+}
+
+@keyframes cardEnter {
+  from { opacity: 0; transform:translateY(18px); }
+  to { opacity: 1; transform:translateY(0); }
+}
+
+.avatar {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  border: 2.5px solid #bae6fd;
+  box-shadow: 0 2px 14px #14b8a62a;
+  object-fit: cover;
+}
+
+.secondary {
+  color: #475569;
+  font-size: 1.06rem;
+  margin-top: 8px;
+}
+
+.star {
+  color: #fbbf24;
+  font-size: 1.7rem !important;
+  cursor: pointer;
+  margin-left: 9px;
+  transition: color .17s, transform .11s;
+  user-select: none;
+}
+.star:hover {
+  color: #14b8a6;
+  transform: scale(1.15) rotate(-9deg);
+}
